@@ -986,7 +986,69 @@ ul {
 .hero-section {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    &.about-section {
+        background-image: linear-gradient(#00000086, #00000069), url("../images/about-bg.jpg");
+        background-position: 0 0, 50%;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+    }
+
+    &.play-section {
+        background-image: linear-gradient(#00000086, #00000069), url("../images/play-bg.jpg");
+        background-position: 0 0, 50%;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+    }
+
+    &.fantasy-section {
+        background-image: linear-gradient(#00000086, #00000069), url("../images/fantasy-bg.jpg");
+        background-position: 0 0, 50%;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+    }
+
+    &.faq-section {
+        background-image: linear-gradient(#00000086, #00000069), url("../images/faq-bg.jpg");
+        background-position: 0 0, 50%;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+    }
+
+    &.blog-section {
+        background-image: linear-gradient(#00000086, #00000069), url("../images/blog-bg.jpg");
+        background-position: 0 0, 50%;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+    }
+
+    &.contact-section {
+        background-image: linear-gradient(#00000086, #00000069), url("../images/contact-bg.jpg");
+        background-position: 0 0, 50%;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+    }
 }
+
+.index-work {
+
+    & .team-content {
+        color: #333;
+    }
+
+    & .team-content {
+        h5 {
+            color: #333;
+        }
+    }
+}
+
+.about-image {
+    max-width: 400px;
+    object-fit: cover;
+    object-position: 60% top;
+}
+
 
 .hero {
     background-image: linear-gradient(#00000086, #00000069), url("../images/hero-bg.jpg");
@@ -1032,6 +1094,7 @@ ul {
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
+    row-gap: 20px;
 }
 
 .footer-top {
@@ -1955,6 +2018,10 @@ label {
     }
 }
 
+.logo-footer {
+    width: 200px;
+}
+
 .form__agreement {
     font-family: 'Rubik';
     font-size: 19px;
@@ -2109,6 +2176,7 @@ label {
     border: 1px solid #333;
     min-height: 270px;
     height: 100%;
+    max-width: 270px;
 }
 
 .age-icon {
@@ -2122,10 +2190,31 @@ label {
     position: relative;
     z-index: 1;
     margin-bottom: 20px;
+    color: #fff;
 
     h5 {
-        color: #333;
+        color: #fff;
     }
+}
+
+.fantasy-content {
+    h5 {
+        color: #000;
+    }
+
+    & .body-small {
+        color: #000;
+    }
+
+    & .learn-more-btn {
+        background-color: #980000;
+        margin-top: 20px;
+    }
+
+    & .team-thumb {
+        justify-content: start;
+    }
+
 }
 
 
@@ -2222,7 +2311,51 @@ label {
     backdrop-filter: blur(20px);
     height: 100%;
     max-width: 1000px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 
+}
+
+.team-1 {
+    background-image: linear-gradient(#0000001c, #00000069), url("../images/team-2.jpg");
+    background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    border-radius: 10px;
+}
+
+.team-2 {
+    background-image: linear-gradient(#0000001c, #00000069), url("../images/team-1.jpg");
+    background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    border-radius: 10px;
+}
+
+.team-3 {
+    background-image: linear-gradient(#0000001c, #00000069), url("../images/team-3.jpg");
+    background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    border-radius: 10px;
+}
+
+.team-4 {
+    background-image: linear-gradient(#0000001c, #00000069), url("../images/team-4.jpg");
+    background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+}
+
+.about-card {
+    min-height: 400px;
+
+}
+
+.about-item-reverse {
+    & .about-card {
+        flex-direction: row-reverse;
+
+    }
 }
 
 
@@ -2547,11 +2680,20 @@ label {
 .hero-btns {
     grid-column-gap: 10px;
     display: flex;
+    justify-content: center;
 
     &.active {
         animation: left 0.6s;
         transition: 0.6s;
     }
+}
+
+.follow-link {
+    max-width: 30px;
+}
+
+.follow-container {
+    display: flex;
 }
 
 .button-about {
@@ -2807,7 +2949,9 @@ label {
 
     .footer-right {
         grid-column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
     }
+
 
     .section {
         padding-top: var(--tablet-spacing);
@@ -2921,6 +3065,21 @@ label {
 
     h4 {
         font-size: 20px;
+    }
+
+    .about-card {
+        flex-direction: column-reverse;
+    }
+
+    .about-item-reverse {
+        & .about-card {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-top: 30px;
     }
 
     .primary-button {
@@ -3213,6 +3372,12 @@ label {
         flex-flow: column;
     }
 
+    .about-item-reverse {
+        & .about-card {
+            flex-direction: column;
+        }
+    }
+
     .service-icon {
         width: 60px;
         min-width: 60px;
@@ -3331,6 +3496,7 @@ label {
 @media screen and (max-width: 479px) {
     #w-node-a7f03562-a269-f165-d56e-541f0b1f37c5-0b1f37a4 {
         grid-area: span 1 / span 1 / span 1 / span 1;
+        grid-column: 1/3;
     }
 
     #w-node-a7f03562-a269-f165-d56e-541f0b1f37db-0b1f37a4 {
